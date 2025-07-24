@@ -89,11 +89,11 @@
 }
 
 @utility btn-primary {
-  @apply btn bg-accent-50 text-primary-50 shadow-md hover:shadow-lg;
+  @apply btn bg-accent-50 text-primary-50 hover:shadow-lg;
 }
 
 @utility btn-secondary {
-  @apply btn bg-transparent border-2 border-primary-50 dark:border-primary-500 hover:bg-primary-200 text-primary-50 dark:text-primary-500 shadow-md hover:shadow-lg;
+  @apply btn bg-transparent border-2 border-primary-50 dark:border-primary-500 hover:bg-primary-400 text-primary-50 dark:text-primary-500;
 }
 
 @utility btn-header {
@@ -188,4 +188,16 @@
 /* Focus styles for keyboard navigation */
 :focus-visible {
   @apply outline-hidden ring-2 ring-primary-500 dark:ring-primary-400;
+}
+
+#astronaut-dark {
+  display: none !important;
+}
+
+html.dark #astronaut-light {
+  display: none !important;
+}
+
+html.dark #astronaut-dark {
+  display: block !important;
 }
