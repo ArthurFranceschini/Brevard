@@ -1,4 +1,9 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+
 const serviços = [
    {
     title: "Criação de Marca & Posicionamento",
@@ -44,75 +49,135 @@ const serviços = [
 <path d="M21.73 16.6486C22.5821 15.7838 23.9632 15.7838 24.8153 16.6486C25.6673 17.5133 25.6673 18.915 24.8153 19.7797L13.2669 31.5L24.8153 43.2203L24.9644 43.3889C25.6634 44.2587 25.6141 45.5407 24.8153 46.3514C24.0165 47.1621 22.7532 47.2122 21.8962 46.5028L21.73 46.3514L8.63904 33.0656C7.78699 32.2008 7.78699 30.7992 8.63904 29.9344L21.73 16.6486ZM39.1847 16.6486C40.0368 15.7838 41.4179 15.7838 42.27 16.6486L55.361 29.9344C56.213 30.7992 56.213 32.2008 55.361 33.0656L42.27 46.3514C41.4179 47.2162 40.0368 47.2162 39.1847 46.3514C38.3326 45.4867 38.3326 44.085 39.1847 43.2203L50.7331 31.5L39.1847 19.7797L39.0356 19.6111C38.3366 18.7413 38.3859 17.4593 39.1847 16.6486Z" fill="#0477BF"/>
 </svg>`}
 ];
-
 ---
 
-<section id="serviços" class="section bg-primary-500 dark:bg-primary-50">
-  <div class="container-custom">
-    <div class="text-center max-w-3xl mx-auto pb-16"> <!-- Reduzido de pb-32 para pb-16 -->
-      <h2 class="h2 text-primary-50 dark:text-primary-500">O que sua marca precisa<span class="text-secondary-50"> hoje?</span></h2>
-      <p class="text-primary-50 dark:text-primary-500 mt-8">
-        Confira tudo o que nossa agência oferece para seu crescimento!
-      </p>
-    </div>
-    
-    <div class="grid lg:grid-cols-3 gap-6" style="min-height: 50vh;"> <!-- Reduzido gap-8 para gap-6 e min-height para 50vh -->
-      <!-- Card 1 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <div class="flip-card-icon">
-              <div set:html={serviços[0].icon}></div>
+<Layout title="Tudo oque a brevard pode fazer por você.">
+  <Header />
+<main>
+    <!-- Seção de Serviços -->
+    <section id="serviços" class="section bg-primary-500 dark:bg-primary-50 pt-32">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto pb-16">
+          <h2 class="h2 text-primary-50 dark:text-primary-500">Conheça tudo o que a Brevard pode fazer pela sua marca.</h2>
+          <p class="text-primary-50 dark:text-primary-500 mt-8">
+            Descubra todos os nossos serviços.
+          </p>
+        </div>
+          
+          <!-- Grid principal que inclui cards e CTA -->
+          <div class="grid lg:grid-cols-3 gap-6">
+            <!-- Primeira fileira - Cards 1, 2, 3 -->
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="flip-card-icon">
+                    <div set:html={serviços[0].icon}></div>
+                  </div>
+                  <h3>{serviços[0].title}</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>{serviços[0].description}</p>
+                </div>
+              </div>
             </div>
-            <h3>{serviços[0].title}</h3>
-          </div>
-          <div class="flip-card-back">
-            <p>{serviços[0].description}</p>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="flip-card-icon">
+                    <div set:html={serviços[1].icon}></div>
+                  </div>
+                  <h3>{serviços[1].title}</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>{serviços[1].description}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="flip-card-icon">
+                    <div set:html={serviços[2].icon}></div>
+                  </div>
+                  <h3>{serviços[2].title}</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>{serviços[2].description}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Segunda fileira - Cards 4, 5, 6 -->
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="flip-card-icon">
+                    <div set:html={serviços[3].icon}></div>
+                  </div>
+                  <h3>{serviços[3].title}</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>{serviços[3].description}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="flip-card-icon">
+                    <div set:html={serviços[4].icon}></div>
+                  </div>
+                  <h3>{serviços[4].title}</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>{serviços[4].description}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="flip-card-icon">
+                    <div set:html={serviços[5].icon}></div>
+                  </div>
+                  <h3>{serviços[5].title}</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>{serviços[5].description}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Card que ocupa toda a largura -->
+            <div class="col-span-full mt-8">
+              <div class="bg-gradient-to-r from-secondary-50 to-secondary-500 rounded-2xl p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-secondary-50 to-secondary-500 backdrop-blur-sm"></div>
+                <div class="relative z-10 text-center">
+                  <div class="text-primary-500 mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Sua marca pode mais.</h2>
+                    <p class="text-primary-500 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                      Chegou a hora de sair do básico e crescer com um time pronto para fazer acontecer.
+                    </p>
+                  </div>
+                  
+                  <div class="mt-8">
+                    <a href="#signup" class="btn-primary inline-flex items-center">
+                      Quero transformar meu negócio
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <div class="flip-card-icon">
-              <div set:html={serviços[1].icon}></div>
-            </div>
-            <h3>{serviços[1].title}</h3>
-          </div>
-          <div class="flip-card-back">
-            <p>{serviços[1].description}</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <div class="flip-card-icon">
-              <div set:html={serviços[2].icon}></div>
-            </div>
-            <h3>{serviços[2].title}</h3>
-          </div>
-          <div class="flip-card-back">
-            <p>{serviços[2].description}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-    <div class="py-4 text-center"> <!-- Reduzido de py-6 para py-4 -->
-      <a href="/Serviços" class="btn-primary">
-        Conheça nossos serviços
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-
+      </section>
+  </main>
+  <Footer />
+</Layout>

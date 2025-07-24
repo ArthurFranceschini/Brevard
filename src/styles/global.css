@@ -109,8 +109,7 @@
 }
 
 @utility card {
-  @apply bg-primary-50 dark:bg-primary-100 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300;
-  box-shadow: var(--tw-shadow, 0 4px 6px -1px var(--shadow-color-base), 0 2px 4px -2px var(--shadow-color-base));
+  @apply bg-primary-500 text-primary-50 border-primary-300 dark:bg-primary-100 dark:text-primary-500 border-primary-300 rounded-xl;
 }
 
 @layer base {
@@ -151,7 +150,7 @@
 
  
   h4 {
-    @apply text-2xl italic font-normal; 
+    @apply text-base italic font-normal; 
     line-height: 1; 
     letter-spacing: 0em; 
   }
@@ -213,10 +212,26 @@ html.dark #logo-dark {
 
 /* ===== CARD 3D ===== */
 
+/* === VARIÁVEIS CSS POR TEMA === */
+:root {
+  --card-bg: #ffffff;
+  --card-text: #0a0a0a;
+  --card-border: #CCCCCC;
+  --icon-bg: transparent;
+}
+
+html.dark {
+  --card-bg: #333333;
+  --card-text: #ffffff;
+  --card-border: #333333;
+  --icon-bg: transparent;
+}
+
+/* === ESTILOS DOS CARDS === */
 .flip-card {
   perspective: 1000px;
   width: 400px;
-  height: 600px;
+  height: 400px;
 }
 
 .flip-card-inner {
@@ -248,15 +263,13 @@ html.dark #logo-dark {
   padding: 2rem;
 }
 
-.flip-card-front {
-  background: #ffffff !important;
-  color: #0a0a0a !important;
-  border: 2px solid #CCCCCC;
+.flip-card-front p,
+.flip-card-back p {
+  text-align: left;
+  letter-spacing: 2%;
+  width: 100%;
 }
 
-.flip-card-front h3 {
-  color: #000000 !important;
-}
 
 .flip-card-back {
   background: linear-gradient(135deg, #0477BF 0%, #FE3CAC 100%);
@@ -264,24 +277,24 @@ html.dark #logo-dark {
   transform: rotateY(180deg);
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .flip-card-front {
-    background: #333333;
-    color: #ffffff !important;
-  }
-
-
-}
-
-
 .flip-card-icon {
   width: 64px;
   height: 64px;
   border-radius: 12px;
-  background: rgba(99, 102, 241, 0.1);
+  background: var(--icon-bg);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
+}
+
+.flip-card-front {
+  background: var(--card-bg);
+  color: var(--card-text);
+  border: 2px solid var(--card-border);
+}
+
+.flip-card-front h3,
+.flip-card-front * {
+  color: var(--card-text);
 }

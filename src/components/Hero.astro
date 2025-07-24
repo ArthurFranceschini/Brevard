@@ -1,6 +1,6 @@
 ---
 ---
-<section class="relative pt-32 pb-20 md:pt-40 overflow-hidden hero-section dark:bg-primary-50">
+<section class="relative pt-32 pb-20 md:pt-40 hero-section dark:bg-primary-50">
   <div class="container-custom relative z-10">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div class="slide-up" transition:animate="slide">
@@ -200,5 +200,26 @@
 
 .astronauta-flutuante {
   animation: float 6s ease-in-out infinite;
+}
+</style>
+</section>
+<div class="mt-10 w-full -z-10" transition:animate="slide">
+    <div class="relative bg-gradient-to-r from-[#FE3CAC] to-[#0477BF] py-16 md:py-16 flex items-center justify-center">
+      <div class="text-center">
+        <h1 class="text-white text-4xl md:text-5xl font-bold">Branding, conteúdo, performance e tecnologia.</h1>
+        <p class="text-white mt-4 text-lg">Tudo para sua marca crescer com consistência e resultado</p>
+      </div>
+    </div>
+</div>
+
+<style>
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, #FE3CAC, #0477BF) !important;
+  width: 100vw !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 </style>

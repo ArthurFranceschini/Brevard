@@ -1,0 +1,108 @@
+---
+import WillfredoBispo from '../assets/images/avatar1.jpg'
+import FlaviaAbeche from '../assets/images/avatar2.jpg'
+
+const depoimentos = [
+  {
+    content: "A organização e a qualidade das entregas nos surpreenderam! Diferente de outras agências, eles focam de verdade no resultado e na nossa satisfação. Recomendamos!",
+    author: "Willfredo Bispo",
+    position: "CEO",
+    company: "Dr. Escritura",
+    avatar: WillfredoBispo
+  },  
+  {
+    content: "A Brevard realizou a campanha de marketing para nossa linha FLV e tivemos rapidez e qualidade no atendimento!",
+    author: "Flávia Abeche",
+    position: "Gerente",
+    company: "M. Aires Company",
+    avatar: FlaviaAbeche
+  },
+  {
+    content: "Desde o primeiro contato, a Brevard mostrou seu diferencial. Nossas vendas após os trabalhos com eles, aumentaram expressivamente. Top demais!",
+    author: "Thalita Michellon",
+    position: "Ceo",
+    company: "Jardins do Pontal",
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg"
+  }
+   
+];
+---
+
+<section id="Depoimentos" class="section text-primary-50 dark:text-primary-500 bg-primary-500 dark:bg-primary-50">
+  <div class="container-custom text-center mb-6">
+    <div class="text-center mb-12">
+    <h2 class="mb-6">O que nossos clientes falam?</h2>
+    <p class=''>Veja o que nossos clientes disseram sobre nossos serviços</p>
+  </div>
+  
+  <!-- Grid dos cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+    
+    <!-- Card 1 -->
+           <div class="card p-6 shadow-md border rounded-xl h-full flex flex-col justify-between py-8 text-left">
+  <div class="h-[100px]">
+    <h4 class="text-left">
+      "{depoimentos[0].content}"
+    </h4>
+  </div>
+  <div class="flex items-center gap-4 mt-4 text-left">
+    <img src={depoimentos[0].avatar.src} alt={depoimentos[0].author} class="w-12 h-12 rounded-full"/>
+    <div>
+      <p class="font-semibold">{depoimentos[0].author}</p>
+      <p class="text-xs">{depoimentos[0].position}, {depoimentos[0].company}</p>
+    </div>
+  </div>
+</div>
+
+      <!-- Card 2 -->
+        <div class="card p-6 shadow-md border rounded-xl h-full flex flex-col justify-between py-8 text-left">
+  <div class="h-[100px]">
+    <h4 class="text-left">
+      "{depoimentos[2].content}"
+    </h4>
+  </div>
+  <div class="flex items-center gap-4 mt-4 text-left">
+    <img src={depoimentos[1].avatar.src} alt={depoimentos[1].author} class="w-12 h-12 rounded-full"/>
+    <div>
+      <p class="font-semibold">{depoimentos[1].author}</p>
+      <p class="text-xs">{depoimentos[1].position}, {depoimentos[1].company}</p>
+    </div>
+  </div>
+</div>
+
+      <!-- Card 3 -->
+      <div class="card p-6 shadow-md border rounded-xl h-full flex flex-col justify-between py-8 text-left">
+  <div class="h-[100px]">
+    <h4 class="text-left">
+      "{depoimentos[2].content}"
+    </h4>
+  </div>
+  <div class="flex items-center gap-4 mt-4 text-left">
+    <img src={depoimentos[2].avatar.src} alt={depoimentos[2].author} class="w-12 h-12 rounded-full"/>
+    <div>
+      <p class="font-semibold">{depoimentos[2].author}</p>
+      <p class="text-xs">{depoimentos[2].position}, {depoimentos[2].company}</p>
+    </div>
+  </div>
+</div>
+
+      <!-- Banner -->
+     <div class="col-span-full mt-8 bg-linear-to-r from-secondary-50 to-secondary-500 rounded-2xl p-8 md:p-12 relative overflow-hidden">
+        <div class="absolute inset-0 bg-linear-to-r from-secondary-50 to-secondary-500 backdrop-blur-xs"></div>
+        <div class="relative z-10 text-center md:text-left md:flex items-center justify-between">
+          <div class="text-primary-500 mb-12 md:mb-0 md:mr-8">
+            <h2 class="mb-6">Sua marca pode mais.</h2>
+            <p class="text-primary-500 max-w-2xl">Chegou a hora de sair do básico e crescer com um time pronto para fazer acontecer.</p>
+          </div>
+          <a href="#signup" class="btn-primary">
+            Quero transformar meu negócio
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
