@@ -48,16 +48,17 @@ const serviços = [
 ---
 <section id="serviços" class="section bg-primary-500 dark:bg-primary-50">
   <div class="container-custom">
-    <div class="text-center max-w-3xl mx-auto pb-16"> <!-- Reduzido de pb-32 para pb-16 -->
+    <div class="text-center max-w-3xl mx-auto pb-16">
       <h2 class="h2 text-primary-50 dark:text-primary-500">O que sua marca precisa<span class="text-secondary-50"> hoje?</span></h2>
       <p class="text-primary-50 dark:text-primary-500 mt-8">
         Confira tudo o que nossa agência oferece para seu crescimento!
       </p>
     </div>
     
-    <div class="grid lg:grid-cols-3 gap-6" style="min-height: 50vh;"> <!-- Reduzido gap-8 para gap-6 e min-height para 50vh -->
+    <!-- Grid com centralização condicional -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center lg:justify-items-stretch max-w-sm md:max-w-2xl lg:max-w-none mx-auto" style="min-height: 50vh;">
       <!-- Card 1 -->
-      <div class="flip-card">
+      <div class="flip-card w-full max-w-xs lg:max-w-none">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="flip-card-icon">
@@ -72,7 +73,7 @@ const serviços = [
       </div>
 
       <!-- Card 2 -->
-      <div class="flip-card">
+      <div class="flip-card w-full max-w-xs lg:max-w-none">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="flip-card-icon">
@@ -87,7 +88,7 @@ const serviços = [
       </div>
 
       <!-- Card 3 -->
-      <div class="flip-card">
+      <div class="flip-card w-full max-w-xs lg:max-w-none">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="flip-card-icon">
@@ -102,8 +103,7 @@ const serviços = [
       </div>
     </div>
     
-    
-    <div class="py-4 text-center"> <!-- Reduzido de py-6 para py-4 -->
+    <div class="py-4 text-center">
       <a href="/Serviços" class="btn-primary">
         Conheça nossos serviços
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -113,4 +113,3 @@ const serviços = [
     </div>
   </div>
 </section>
-

@@ -1,31 +1,30 @@
 ---
 ---
-<section class="relative pt-24 pb-16 md:pt-40 hero-section dark:bg-primary-50">
+<section class="relative pt-16 pb-12 md:pt-40 md:pb-16 hero-section dark:bg-primary-50">
   <div class="container-custom relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
       
       <!-- Texto -->
-      <div class="slide-up text-center md:text-left" transition:animate="slide">
-        <h1 class="mb-6 text-secondary-900 dark:text-white leading-tight">
-          <span class="text-h1 dark:text-primary-500">Explore o </span>
-          <span class="text-secondary-50">Futuro</span>
-          <span class="text-h1"> da sua marca com a Brevard</span>
+      <div class="slide-up text-center md:text-left order-2 md:order-1 px-4 md:px-0" transition:animate="slide">
+         <h1 class="mb-6 text-secondary-900 dark:text-white leading-tight">
+          <span class="text-h1 md:text-h1 dark:text-primary-500">Explore o </span>
+          <span class="ttext-h1 md:text-h1 dark:text-primary-500">Futuro</span>
+          <span class="text-h1 md:text-h1 dark:text-primary-500"> da sua marca com a Brevard</span>
           <span class="text-secondary-50">.</span>
         </h1>
-        <p class="text-xl text-secondary-600 dark:text-primary-500 mb-12 max-w-xl mx-auto md:mx-0">
+        <p class="text-lg md:text-xl text-secondary-600 dark:text-primary-500 mb-8 md:mb-12 max-w-xl mx-auto md:mx-0">
           Impulsionamos negócios com estratégias criativas e resultados reais.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-          <a href="/contact" class="btn-primary">Fale com a gente</a>
-          <a href="/blog" rel="noopener" class="btn-secondary">Portfólio</a>
+        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3 md:gap-4 px-4 sm:px-0">
+          <a href="/contact" class="btn-primary w-full sm:w-auto">Fale com a gente</a>
+          <a href="/blog" rel="noopener" class="btn-secondary w-full sm:w-auto">Portfólio</a>
         </div>
       </div>
 
-      <!-- Imagem ou outro conteúdo -->
-      <div class="relative fade-in mx-auto md:mx-0" transition:animate="fade">
-  <!-- Animated Astronaut SVG Hero Image -->
-  <div class="w-full max-w-lg mx-auto">
-    <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" width="600" height="500"> 
+      <!-- Imagem -->
+      <div class="relative fade-in mx-auto md:mx-0 order-1 md:order-2" transition:animate="fade">
+        <div class="w-full max-w-sm md:max-w-lg mx-auto">
+          <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto"> 
 
   <!-- círculo -->
   <g opacity="0.6">
@@ -189,39 +188,79 @@
 <path d="M255.179 129.099C255.71 129.01 256.404 128.892 256.729 128.819C257.053 128.76 257.467 128.701 257.644 128.686C257.836 128.686 258.101 128.789 258.249 128.922C258.426 129.099 258.544 129.527 258.618 130.221C258.692 130.988 258.677 131.298 258.529 131.402C258.426 131.475 257.806 131.667 257.157 131.815C256.522 131.962 255.651 132.169 255.253 132.272C254.839 132.376 253.91 132.582 253.186 132.73C252.448 132.878 251.445 133.055 250.928 133.114C250.397 133.188 249.91 133.188 249.747 133.114C249.585 133.025 249.393 132.553 249.201 131.8C248.935 130.737 248.935 130.59 249.127 130.383C249.245 130.25 249.644 130.103 250.013 130.058C250.382 130.014 250.869 129.911 251.12 129.837C251.371 129.763 252.153 129.601 252.891 129.483C253.614 129.365 254.648 129.188 255.179 129.099Z" fill="white"/>
 <path d="M231.784 133.926C232.345 133.807 233.246 133.616 233.777 133.498C234.308 133.365 234.899 133.291 235.105 133.291C235.386 133.32 235.548 133.468 235.755 133.911C235.917 134.236 236.08 134.826 236.109 135.239C236.168 135.859 236.139 135.992 235.902 136.081C235.755 136.125 234.663 136.405 233.482 136.686C232.301 136.966 230.943 137.276 230.456 137.379C229.969 137.468 229.142 137.63 228.611 137.748C228.065 137.866 227.563 137.896 227.43 137.822C227.283 137.748 227.15 137.247 227.017 136.405C226.869 135.343 226.869 135.062 227.017 134.914C227.12 134.811 228.006 134.59 228.98 134.427C229.954 134.28 231.224 134.044 231.784 133.926Z" fill="white"/>
   </svg>
-</g>
+    </g>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .astronauta-flutuante {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Ajustes específicos para mobile */
+    @media (max-width: 768px) {
+      .hero-section {
+        min-height: auto;
+      }
+      
+      .container-custom {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  </style>
+</section>
+
+<div class="w-full -z-10" transition:animate="slide">
+  <div class="relative gradient-section py-12 md:py-16 flex items-center justify-center px-4">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        Branding, conteúdo, performance e tecnologia.
+      </h1>
+      <p class="text-white mt-3 md:mt-4 text-base md:text-lg">
+        Tudo para sua marca crescer com consistência e resultado
+      </p>
+    </div>
   </div>
 </div>
 
 <style>
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
+  .gradient-section {
+    background: linear-gradient(to right, #FE3CAC, #0477BF) !important;
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    /* Força o background em todos os modos */
+    background-color: #FE3CAC !important;
+  }
 
-.astronauta-flutuante {
-  animation: float 6s ease-in-out infinite;
-}
-</style>
-</section>
-<div class="mt-10 w-full -z-10" transition:animate="slide">
-    <div class="relative bg-gradient-to-r from-[#FE3CAC] to-[#0477BF] py-16 md:py-16 flex items-center justify-center">
-      <div class="text-center">
-        <h1 class="text-white text-4xl md:text-5xl font-bold">Branding, conteúdo, performance e tecnologia.</h1>
-        <p class="text-white mt-4 text-lg">Tudo para sua marca crescer com consistência e resultado</p>
-      </div>
-    </div>
-</div>
+  /* Garantia extra para dark mode */
+  .dark .gradient-section {
+    background: linear-gradient(to right, #FE3CAC, #0477BF) !important;
+    background-color: #FE3CAC !important;
+  }
 
-<style>
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, #FE3CAC, #0477BF) !important;
-  width: 100vw !important;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
+  /* Remove qualquer background do container pai */
+  .gradient-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #FE3CAC, #0477BF);
+    z-index: -1;
+  }
 </style>
