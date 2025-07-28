@@ -3,76 +3,62 @@ const currentYear = new Date().getFullYear();
 
 const footerLinks = [
   {
-    title: "Home",
+    title: "Navegação",
     links: [
-      { text: "Home", url: "/" },
-      { text: "Features", url: "/features" },
-      { text: "Pricing", url: "/pricing" },
-      { text: "Contact", url: "/contact" }
+      { text: "ínicio", url: "/" },
+      { text: "Serviços", url: "/Serviços" },
+      { text: "Sobre Nós", url: "/Sobre-nos" },
+      { text: "Portifólio", url: "/Portifólio" }
     ]
   },
   {
-    title: "Product",
+    title: "Cookies",
     links: [
-      { text: "Features", url: "/features" },
-      { text: "Pricing", url: "/pricing" },
-      { text: "FAQ", url: "/faqs" },
-      { text: "Changelog", url: "/changelog" },
-      { text: "Integrations", url: "/integrations" }
+      { text: "Política de Privacidade", url: "/Política-de-Privacidade" },
+      { text: "Termos-e-condiçoes", url: "/Termos-e-condiçoes" },
+      { text: "Política de Cookies", url: "/Política de Cookies" }
     ]
   },
-  {
-    title: "Resources",
-    links: [
-      { text: "Blog", url: "/blog" },
-      { text: "Case Studies", url: "/case-study" },
-      { text: "404 Page", url: "/404" }
-    ]
-  },
-  {
-    title: "Company",
-    links: [
-      { text: "About Us", url: "/company" },
-      { text: "Careers", url: "/career" },
-      { text: "Contact", url: "/contact" },
-      { text: "Reviews", url: "/reviews" },
-      { text: "Privacy Policy", url: "/privacy-policy" },
-      { text: "Terms of Service", url: "/terms-conditions" }
-    ]
-  }
 ];
 ---
 
-<footer class="bg-gray-900 text-white pt-16 pb-8">
+<footer class="bg-primary-100 text-white pt-16 pb-8">
   <div class="container-custom">
     <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
       <div class="md:col-span-2 lg:col-span-2">
         <a href="/" class="flex items-center mb-6" aria-label="Go to homepage">
-          <svg class="h-8 w-auto text-primary-400" viewBox="0 0 40 40" fill="currentColor">
-            <path d="M20 5C11.716 5 5 11.716 5 20C5 28.284 11.716 35 20 35C28.284 35 35 28.284 35 20C35 11.716 28.284 5 20 5ZM20 10C22.761 10 25 12.239 25 15C25 17.761 22.761 20 20 20C17.239 20 15 17.761 15 15C15 12.239 17.239 10 20 10ZM20 32C16.218 32 12.848 30.154 10.859 27.307C12.839 24.663 16.159 23 20 23C23.841 23 27.161 24.663 29.141 27.307C27.152 30.154 23.782 32 20 32Z" />
-          </svg>
-          <span class="ml-2 text-xl font-display font-semibold text-white">SaaSify</span>
+          <svg id="logo-dark" width="230" height="48" viewBox="0 0 228.71 48" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <path d="M0 0H12.4444C16.4543 0 19.4469 0.325926 21.4222 0.977778C23.3975 1.57037 25.0173 2.80494 26.2815 4.68148C27.4864 6.53827 28.0889 9.55062 28.0889 13.7185C28.0889 16.5432 27.6642 18.479 26.8148 19.5259C25.8864 20.6914 24.1481 21.5506 21.6 22.1037C24.5235 22.7556 26.4889 23.8222 27.4963 25.3037C28.5037 26.7654 29.0074 29.0963 29.0074 32.2963V36.7111C29.0074 40.0494 28.642 42.4593 27.9111 43.9407C27.1407 45.5605 25.9654 46.6272 24.3852 47.1407C22.7259 47.7136 19.4074 48 14.4296 48H0V0ZM12.4444 8.26667V18.9333C12.8 18.8938 13.2247 18.8741 13.7185 18.8741C14.9432 18.8741 15.7136 18.5679 16.0296 17.9556C16.3852 17.363 16.563 15.6444 16.563 12.8C16.563 11.2593 16.4247 10.2123 16.1481 9.65926C15.8321 9.06667 15.4667 8.68148 15.0519 8.5037C14.6765 8.34568 13.8074 8.26667 12.4444 8.26667ZM12.4444 26.4V39.8222C14.2222 39.7235 15.3481 39.437 15.8222 38.963C16.316 38.4691 16.563 37.2543 16.563 35.3185V30.8148C16.563 28.8198 16.3457 27.5852 15.9111 27.1111C15.4765 26.6963 14.321 26.4593 12.4444 26.4Z" fill="#FFFFFF"/>
+      <path d="M33.4815 0H42.3407C48.2469 0 52.2272 0.246914 54.2815 0.740741C56.3358 1.15556 58.0346 2.30123 59.3778 4.17778C60.6815 6.11358 61.3333 9.08642 61.3333 13.0963C61.3333 16.8296 60.8593 19.3481 59.9111 20.6519C58.9827 21.9358 57.1753 22.6963 54.4889 22.9333C56.9975 23.6247 58.6568 24.4543 59.4667 25.4222C60.3556 26.5284 60.879 27.4568 61.037 28.2074C61.1556 28.7605 61.2346 29.6099 61.2741 30.7556C61.3136 31.9012 61.3333 33.442 61.3333 35.3778V48H49.7481V32.0296C49.7481 29.442 49.5407 27.8716 49.1259 27.3185C48.7111 26.7062 47.6444 26.4 45.9259 26.4V48H33.4815V0ZM45.9259 8.26667V18.9333C47.3877 18.9333 48.3753 18.7358 48.8889 18.3407C49.4617 17.8864 49.7481 16.6321 49.7481 14.5778V11.9407C49.7481 10.4 49.4617 9.39259 48.8889 8.91852C48.3358 8.48395 47.3481 8.26667 45.9259 8.26667Z" fill="#FFFFFF"/>
+      <path d="M66.1926 0.0592593H86.9926V9.65926H78.637V18.7556H86.4593V27.8519H78.637V38.4H87.7926V48H66.1926V0.0592593Z" fill="#FFFFFF"/>
+      <path d="M121.037 0L114.726 48H95.7926L88.5926 0H101.748C102.123 3.23951 102.548 7.15062 103.022 11.7333C103.496 16.2963 103.881 20.1679 104.178 23.3481C104.474 26.5284 104.76 29.9358 105.037 33.5704C105.175 31.6938 105.343 29.4617 105.541 26.8741C105.738 24.2667 105.926 21.7975 106.104 19.4667C106.301 17.116 106.479 14.9827 106.637 13.0667C106.815 11.1506 106.943 9.7679 107.022 8.91852L107.941 0H121.037Z" fill="#FFFFFF"/>
+      <path d="M144.741 0L151.852 48H139.111L138.489 39.3778H134.015L133.274 48H120.356L126.726 0H144.741ZM138.133 30.8741C137.817 28.1877 137.531 25.5802 137.274 23.0519C137.037 20.5037 136.691 16.4049 136.237 10.7556C135.486 16.2074 134.953 20.3259 134.637 23.1111C134.321 25.8765 134.064 28.4642 133.867 30.8741H138.133Z" fill="#FFFFFF"/>
+      <path d="M154.015 0H162.874C168.78 0 172.76 0.246914 174.815 0.740741C176.869 1.15556 178.568 2.30123 179.911 4.17778C181.215 6.11358 181.867 9.08642 181.867 13.0963C181.867 16.8296 181.393 19.3481 180.444 20.6519C179.516 21.9358 177.709 22.6963 175.022 22.9333C177.531 23.6247 179.19 24.4543 180 25.4222C180.889 26.5284 181.412 27.4568 181.57 28.2074C181.689 28.7605 181.768 29.6099 181.807 30.7556C181.847 31.9012 181.867 33.442 181.867 35.3778V48H170.281V32.0296C170.281 29.442 170.074 27.8716 169.659 27.3185C169.244 26.7062 168.178 26.4 166.459 26.4V48H154.015V0ZM166.459 8.26667V18.9333C167.921 18.9333 168.909 18.7358 169.422 18.3407C169.995 17.8864 170.281 16.6321 170.281 14.5778V11.9407C170.281 10.4 169.995 9.39259 169.422 8.91852C168.869 8.48395 167.881 8.26667 166.459 8.26667Z" fill="#FFFFFF"/>
+      <path d="M186.726 0H196.059C202.025 0 206.094 0.28642 208.267 0.859259C210.4 1.39259 212.02 2.30123 213.126 3.58519C214.193 4.80988 214.874 6.20247 215.17 7.76296C215.467 9.18519 215.615 12.237 215.615 16.9185V33.7481C215.615 38.1728 215.407 41.0469 214.993 42.3704C214.558 43.8716 213.857 44.9975 212.889 45.7481C211.842 46.6173 210.607 47.2099 209.185 47.5259C207.565 47.842 205.314 48 202.43 48H186.726V0ZM199.17 8.26667V39.8222C200.948 39.8222 202.054 39.4568 202.489 38.7259C202.943 37.9753 203.17 36.0099 203.17 32.8296V14.1926C203.17 11.9407 203.091 10.5481 202.933 10.0148C202.775 9.42222 202.449 8.97778 201.956 8.68148C201.521 8.40494 200.593 8.26667 199.17 8.26667Z" fill="#FFFFFF"/>
+      <path d="M216.571 41.9319C216.571 38.5805 219.288 35.8637 222.639 35.8637C225.991 35.8637 228.708 38.5805 228.708 41.9319C228.708 45.2832 225.991 48 222.639 48C219.288 48 216.571 45.2832 216.571 41.9319Z" fill="#0477BF"/>
+    </svg>
+    
         </a>
-        <p class="text-gray-400 mb-6 max-w-md">
-          Empowering businesses with innovative SaaS solutions that drive growth, efficiency, and success in the digital age.
+        <p class="text-primary-500 mb-6 max-w-md">
+          Para marcas que querem ir além. Conecte sua empresa ao ecossistema que transforma negócios.
         </p>
         <div class="flex space-x-4">
-          <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors" aria-label="Twitter">
+          <a href="#" class="text-primary-500 hover:text-primary-300 transition-colors" aria-label="Twitter">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
             </svg>
           </a>
-          <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors" aria-label="LinkedIn">
+          <a href="#" class="text-primary-500 hover:text-primary-300 transition-colors" aria-label="LinkedIn">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
             </svg>
           </a>
-          <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors" aria-label="Facebook">
+          <a href="#" class="text-primary-500 hover:text-primary-300 transition-colors" aria-label="Facebook">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
             </svg>
           </a>
-          <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors" aria-label="GitHub">
+          <a href="#" class="text-primary-500 hover:text-primary-300 transition-colors" aria-label="GitHub">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
             </svg>
@@ -94,15 +80,15 @@ const footerLinks = [
       ))}
     </div>
     
-    <div class="border-t border-gray-800 pt-8 mt-8">
+    <div class="border-t border-primary-500 pt-8 mt-8">
       <div class="flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-400 text-sm mb-4 md:mb-0">
-          &copy; {currentYear} SaaSify. All rights reserved.
+        <p class="text-primary-500 text-sm mb-4 md:mb-0">
+          &copy; {currentYear} Brevard. Todos os direitos reservados.
         </p>
-        <div class="flex space-x-6">
-          <a href="/privacy-policy" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Privacy Policy</a>
-          <a href="/terms-conditions" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Terms of Service</a>
-          <a href="#" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Cookie Policy</a>
+        <div class="text-primary-500 flex space-x-6">
+          <a href="/privacy-policy" class="text-primary-500 hover:text-primary-200 text-sm transition-colors">Política de Privacidade</a>
+          <a href="/terms-conditions" class="text-primary-500 hover:text-primary-200 text-sm transition-colors">Termos de Serviço</a>
+          <a href="#" class="text-primary-500 hover:text-primary-200 text-sm transition-colors">Política de Cookies</a>
         </div>
       </div>
     </div>

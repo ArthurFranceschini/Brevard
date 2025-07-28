@@ -298,3 +298,38 @@ html.dark {
 .flip-card-front * {
   color: var(--card-text);
 }
+
+@media (max-width: 1024px) {
+  /* Ajusta o grid principal para mobile */
+  #serviços .grid.lg\\:grid-cols-3 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    min-height: 70vh !important;
+  }
+  
+  /* Reduz o tamanho dos cards para caber melhor */
+  .flip-card {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  
+  /* Centraliza a seção inteira */
+  #serviços {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+  }
+  
+  /* Garante que o container ocupe toda a largura */
+  #serviços .container-custom {
+    width: 100% !important;
+  }
+  
+  /* Esconde o CTA card no mobile para focar nos serviços */
+  .col-span-full {
+    display: none !important;
+  }
+}
