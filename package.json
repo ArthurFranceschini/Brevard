@@ -1,13 +1,8 @@
 {
-  "name": "larry-xue/astro-sassify-template",
-  "description": "A template for creating a SaaS landing page with Astro and Tailwind CSS",
-  "author": "Larry Xue",
+  "name": "brevard-website",
+  "description": "Website desenvolvido com Astro e Tailwind CSS",
+  "author": "Arthur Franceschini",
   "license": "MIT",
-  "homepage": "https://astro-sassify.larryxue.dev/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/larry-xue/astro-sassify-template.git"
-  },
   "type": "module",
   "version": "1.0.0",
   "private": true,
