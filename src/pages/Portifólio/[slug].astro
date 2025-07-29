@@ -1,9 +1,9 @@
 ---
-
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { posts } from './index.astro';
+
 const tags = ["Mídia Social", "Ui/Ux", "Design Gráfico", "Branding", "Desenvolvimento", "Automação", "Tráfego", "Foto e Vídeo"];
 
 export function getStaticPaths() {
@@ -20,20 +20,13 @@ export function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-
 ---
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-</head>
-<body>
-
-<Header />
- <Layout title={`${post.nomedoProjeto}`} description={post.descricao}>
-  <section>
-    <main class="bg-primary-500 dark:bg-primary-50 pt-32 pb-16">
+<!-- ✅ TÍTULO CORRIGIDO COM "- Brevard" -->
+<Layout title={`${post.nomedoProjeto} - Brevard`} description={post.descricao}>
+  <Header />
+  
+  <main class="bg-primary-500 dark:bg-primary-50 pt-32 pb-16">
     <div class="container-custom">
       <!-- Breadcrumb -->
       <nav class="mb-8">
@@ -69,29 +62,36 @@ const { post } = Astro.props;
         </p>
       </div>
 
-      <!-- Galeria de Imagens -->
+      <!-- Galeria de Imagens OTIMIZADA -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         {post.imagem.map((img, index) => (
-          <div class="rounded-lg overflow-hidden shadow-lg">
+          <div class="rounded-lg overflow-hidden shadow-lg bg-gray-200 dark:bg-gray-700">
             <img 
               src={img} 
               alt={`${post.nomedoProjeto} - Imagem ${index + 1}`}
               class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
+              width="400"
+              height="256"
             />
           </div>
         ))}
       </div>
 
-
       <!-- Botão para o Site -->
       <div class="text-center">
         <a 
           href={post.link} 
-           
+          
           rel="noopener noreferrer"
           class="btn-secondary"
-        >Confira o projeto</a>
-    </section>    
-    </Layout>
-    </body>
-</html>
+        >
+          Confira o projeto
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
