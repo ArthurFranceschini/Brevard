@@ -5,20 +5,20 @@ const footerLinks = [
   {
     title: "Navegação",
     links: [
-      { text: "ínicio", url: "/" },
+      { text: "Início", url: "/" },
       { text: "Serviços", url: "/Serviços" },
       { text: "Sobre Nós", url: "/Sobre-nos" },
-      { text: "Portifólio", url: "/Portifólio" }
+      { text: "Portfólio", url: "/Portifólio" }
     ]
   },
   {
-    title: "Cookies",
+    title: "Termos e Condições",
     links: [
-      { text: "Política de Privacidade", url: "/Política-de-Privacidade" },
-      { text: "Termos-e-condiçoes", url: "/Termos-e-condiçoes" },
-      { text: "Política de Cookies", url: "/Política de Cookies" }
+        {   text: "Termos e Condições", url: "/Termos-e-condicoes"}, 
+        {   text: "Política de Privacidade", url: "/Politica-de-Privacidade"}
+
     ]
-  },
+  }
 ];
 ---
 
@@ -28,6 +28,7 @@ const footerLinks = [
       <!-- Logo e descrição - ocupa 3 colunas -->
       <div class="md:col-span-2 lg:col-span-3">
         <a href="/" class="flex items-center mb-6" aria-label="Go to homepage">
+          <!-- SVG do logo -->
           <svg width="230" height="48" viewBox="0 0 228.71 48" xmlns="http://www.w3.org/2000/svg" class="block">
             <path d="M0 0H12.4444C16.4543 0 19.4469 0.325926 21.4222 0.977778C23.3975 1.57037 25.0173 2.80494 26.2815 4.68148C27.4864 6.53827 28.0889 9.55062 28.0889 13.7185C28.0889 16.5432 27.6642 18.479 26.8148 19.5259C25.8864 20.6914 24.1481 21.5506 21.6 22.1037C24.5235 22.7556 26.4889 23.8222 27.4963 25.3037C28.5037 26.7654 29.0074 29.0963 29.0074 32.2963V36.7111C29.0074 40.0494 28.642 42.4593 27.9111 43.9407C27.1407 45.5605 25.9654 46.6272 24.3852 47.1407C22.7259 47.7136 19.4074 48 14.4296 48H0V0ZM12.4444 8.26667V18.9333C12.8 18.8938 13.2247 18.8741 13.7185 18.8741C14.9432 18.8741 15.7136 18.5679 16.0296 17.9556C16.3852 17.363 16.563 15.6444 16.563 12.8C16.563 11.2593 16.4247 10.2123 16.1481 9.65926C15.8321 9.06667 15.4667 8.68148 15.0519 8.5037C14.6765 8.34568 13.8074 8.26667 12.4444 8.26667ZM12.4444 26.4V39.8222C14.2222 39.7235 15.3481 39.437 15.8222 38.963C16.316 38.4691 16.563 37.2543 16.563 35.3185V30.8148C16.563 28.8198 16.3457 27.5852 15.9111 27.1111C15.4765 26.6963 14.321 26.4593 12.4444 26.4Z" fill="white"/>
             <path d="M33.4815 0H42.3407C48.2469 0 52.2272 0.246914 54.2815 0.740741C56.3358 1.15556 58.0346 2.30123 59.3778 4.17778C60.6815 6.11358 61.3333 9.08642 61.3333 13.0963C61.3333 16.8296 60.8593 19.3481 59.9111 20.6519C58.9827 21.9358 57.1753 22.6963 54.4889 22.9333C56.9975 23.6247 58.6568 24.4543 59.4667 25.4222C60.3556 26.5284 60.879 27.4568 61.037 28.2074C61.1556 28.7605 61.2346 29.6099 61.2741 30.7556C61.3136 31.9012 61.3333 33.442 61.3333 35.3778V48H49.7481V32.0296C49.7481 29.442 49.5407 27.8716 49.1259 27.3185C48.7111 26.7062 47.6444 26.4 45.9259 26.4V48H33.4815V0ZM45.9259 8.26667V18.9333C47.3877 18.9333 48.3753 18.7358 48.8889 18.3407C49.4617 17.8864 49.7481 16.6321 49.7481 14.5778V11.9407C49.7481 10.4 49.4617 9.39259 48.8889 8.91852C48.3358 8.48395 47.3481 8.26667 45.9259 8.26667Z" fill="white"/>
@@ -69,7 +70,7 @@ const footerLinks = [
             <ul class="space-y-2">
               {column.links.map(link => (
                 <li>
-                  <a href={link.url} class="text-gray-400 hover:text-primary-400 transition-colors">{link.text}</a>
+                  <a href={link.url} class="text-primary-300 hover:text-primary-500 transition-colors">{link.text}</a>
                 </li>
               ))}
             </ul>
@@ -84,9 +85,8 @@ const footerLinks = [
           &copy; {currentYear} Brevard. Todos os direitos reservados.
         </p>
         <div class="text-primary-500 flex space-x-6">
-          <a href="/privacy-policy" class="text-primary-500 hover:text-primary-200 text-sm transition-colors">Política de Privacidade</a>
-          <a href="/terms-conditions" class="text-primary-500 hover:text-primary-200 text-sm transition-colors">Termos de Serviço</a>
-          <a href="#" class="text-primary-500 hover:text-primary-200 text-sm transition-colors">Política de Cookies</a>
+          <a href="/Politica-de-Privacidade" class="text-primary-500 hover:text-primary-200 text-sm transition-colors">Política de Privacidade</a>
+          <a href="/Termos-e-condicoes" class="text-primary-500 hover:text-primary-200 text-sm transition-colors">Termos de Serviço</a>
         </div>
       </div>
     </div>

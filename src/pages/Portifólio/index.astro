@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+
+export const tags = [ "Mídia Social", "Ui/Ux", "Design Gráfico","Branding","Desenvolvimento","Automação","Tráfego","Foto e Vídeo"]
+export const posts = [{
+  id: 1, 
+  nomedoProjeto: "M. Aires Company",
+  slug: "M.aires",
+  tags: [1, 4],
+  descricao: "Na M. Aires Company, nosso desáfio foi ir além do digital.  Desenvolvemos toda a experiência de marca conectada à licenciatura da Patrulha Canina, unindo estratégia e design Atuamos no UX/UI e desenvolvimento do site com foco em usabilidade e performance. No físico, aplicamos a identidade em embalagens, adesivos e materiais promocionais, garantindo consistência visual em todos os pontos de contato com o consumidor. Neste case, construímos uma presença que respeita o licenciamento, reforça o posicionamento da marca e gera valor real desde a tela até a prateleira.",
+  imagem: ["/images/M.aires/1.jpg","/images/M.aires/2.jpg","/images/M.aires/3.jpg"],
+  thumb: "/images/M.aires/Thumb.jpg",
+  link: "https://maires.com.br",
+}];
+---
+
+<Layout title="Portifólio - Brevard">
+<Header/>
+  <section id="Portifólio" class="section bg-primary-500 dark:bg-primary-50 pt-32">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto pb-16">
+        <h2 class="h2 text-primary-50 dark:text-primary-500">
+          <span class="text-secondary-50">Resultados </span>falam mais alto.
+        </h2>
+        <p class="text-primary-50 dark:text-primary-500 mt-8">
+          Veja como já transformamos marcas com estratégia e criatividade.
+        </p>
+      </div>
+
+      <!-- Grid de Cards -->
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map(post => (
+            
+            <div class="bg-primary-500 dark:bg-primary-100 rounded-lg border border-primary-300 w-full">
+              <img 
+                src={post.thumb} 
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+              <div class="text-left p-6">
+                <span class="font-bold text-secondary-50">
+                  {post.tags.map(tagIndex => tags[tagIndex]).join(', ')}
+                </span>
+                <a href={`/Portifólio/${post.slug}`} class="block">
+                  <h3 class="text-primary-50 hover:underline transition-all duration-300 dark:text-primary-500 h3 mt-4 mb-4">
+                    {post.nomedoProjeto}
+                  </h3>
+                  <p class="text-primary-50 hover:underline transition-all duration-300 dark:text-primary-500 mb-4 line-clamp-3">
+                    {post.descricao}
+                  </p>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+<Footer />
+</Layout>
