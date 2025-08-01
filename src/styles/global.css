@@ -243,6 +243,7 @@ html.dark {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -265,7 +266,7 @@ html.dark {
 
 .flip-card-front p,
 .flip-card-back p {
-  text-align: left;
+  text-align: justify;
   letter-spacing: 2%;
   width: 100%;
 }
