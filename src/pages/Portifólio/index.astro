@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 
-export const tags = [ "Mídia Social", "Ui/Ux", "Design Gráfico","Branding","Desenvolvimento","Automação","Tráfego","Foto e Vídeo"]
+export const tags = [ "Mídia Social", "Ui/Ux", "Design Gráfico","Branding","Desenvolvimento","Automação","Tráfego","Foto e Vídeo", "Licenciamento",]
 export const posts = [{
   id: 1, 
   nomedoProjeto: "M. Aires Company",
@@ -26,7 +26,7 @@ export const posts = [{
   link: "https://www.instagram.com/drescritura",
 },
 {
-  id: 2, 
+  id: 3, 
   nomedoProjeto: "Jardins do Pontal",
   slug: "Jardins-do-pontal",
   tags: [0, 1, 2, 3, 4],
@@ -34,6 +34,16 @@ export const posts = [{
   imagem: ["/images/JardinsDoPontal/1.jpg","/images/JardinsDoPontal/2.jpg", "/images/JardinsDoPontal/3.jpg"],
   thumb: "/images/JardinsDoPontal/Thumb.jpg",
   link: "http://jardinsdopontal.com.br/",
+},
+{
+  id: 4, 
+  nomedoProjeto: "Patrulha Canina",
+  slug: "Patrulha-Canina",
+  tags: [2, 8],
+  descricao: "Para a Patrulha Canina, além do design gráfico fiel às diretrizes da marca, nossa atuação envolveu todo o processo de licenciamento oficial, desde a adequação jurídica e contratual até a validação de uso em cada peça desenvolvida. Isso garantiu segurança para o cliente, respeito à propriedade intelectual e total conformidade com as exigências da marca. Adaptamos elementos ao contexto local sem perder a identidade global, assegurando consistência visual em cada aplicação. O resultado fortaleceu a presença da marca licenciada no Brasil, aumentou o reconhecimento e gerou impacto real junto ao público-alvo infantil e familiar.",
+  imagem: ["/images/PatrulhaCanina/1.jpg","/images/PatrulhaCanina//2.jpg", "/images/PatrulhaCanina/3.jpg"],
+  thumb: "/images/PatrulhaCanina/Thumb.png",
+  link: "https://maires.com.br",
 },
 ];
 ---
@@ -51,7 +61,6 @@ export const posts = [{
         </p>
       </div>
 
-      <!-- Grid de Cards -->
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map(post => (
