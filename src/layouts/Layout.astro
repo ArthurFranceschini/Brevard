@@ -9,14 +9,14 @@ export interface Props {
 }
 
 const { 
-  title, 
+  title = 'Brevard, agência de marketing em Foz do Iguaçu', 
   description = "Brevard."
 } = Astro.props;
 ---
 
 <!doctype html>
 
-<html lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))" :class="{ 'dark': darkMode }">
+<html lang="pt-br" x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))" :class="{ 'dark': darkMode }">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
