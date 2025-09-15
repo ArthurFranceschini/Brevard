@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
+import EquipeBrevard from '../assets/images/equipe.jpg';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="Sobre nós - Brevard">
@@ -30,7 +32,11 @@ import HeroSection from '../components/HeroSection.astro';
             </p>
           </div>
           <div class="rounded-lg overflow-hidden shadow-xl">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Sassify Team" class="w-full h-auto" />
+            <Image 
+          src={EquipeBrevard} 
+             alt="Equipe Brevard" 
+          class="w-full h-auto rounded-lg shadow-xl"
+/>
           </div>
         </div>
 
